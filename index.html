@@ -10,78 +10,124 @@
   <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-    }
-    .container {
-      display: flex;
-      max-width: 1100px;
-      margin: auto;
-      background: white;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      align-items: stretch;
-    }
-    .photo {
-      width: 40%;
-      background: #fff;
-      padding: 0;
-      display: block;
-    }
-    .photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    .info {
-      width: 60%;
-      background: #0f3434;
-      color: white;
-      padding: 40px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    .name {
-      font-size: 36px;
-      font-weight: bold;
-      line-height: 1.2;
-      margin-bottom: 5px;
-    }
-    .title {
-      font-size: 18px;
-      margin-bottom: 0px;
-    }
-    .contact a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 18px;
-      display: flex;
-      align-items: center;
-      margin-bottom: 15px;
-    }
-    .contact a i {
-      margin-right: 10px;
-      color: #ff6b6b;
-    }
-    .linkedin a {
-      color: #fff;
-      font-size: 18px;
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-    }
-    .linkedin a i {
-      margin-right: 10px;
-      color: #ff6b6b;
-    }
-  </style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  max-width: 1100px;
+  width: 100%;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  flex-direction: row;
+}
+
+.photo {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+}
+
+.info {
+  flex: 1.5;
+  background: #0f3434;
+  color: white;
+  padding: 30px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.name {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 5px;
+}
+
+.title {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.contact a, .linkedin a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.contact a i, .linkedin a i {
+  margin-right: 10px;
+  color: #ff6b6b;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  body {
+    background: #0f3434;
+    height: auto;
+    display: block; /* So container stacks naturally */
+  }
+
+  .container {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .photo {
+    width: 100%;
+    height: auto;
+  }
+
+  .photo img {
+    width: 100%;
+    height: auto; /* Scale image naturally */
+    object-fit: cover;
+    display: block;
+  }
+
+  .info {
+    padding: 20px;
+  }
+
+  .name { font-size: 28px; }
+  .title { font-size: 16px; }
+  .contact a, .linkedin a { font-size: 16px; }
+}
+
+@media (max-width: 480px) {
+  .name { font-size: 24px; }
+  .title { font-size: 14px; }
+  .contact a, .linkedin a { font-size: 14px; }
+}
+</style>
+
 </head>
 <body>
   <div class="container">
@@ -92,7 +138,7 @@
     <div class="info">
       <div class="name">DANIEL DREJER<br>RASMUSSEN</div>
       <div class="title">SOLUTION ARCHITECT</div>
-		<hr style="border: 0; border-top: 2px solid #fff; margin: 20px 0;">
+      <hr style="border: 0; border-top: 2px solid #fff; margin: 20px 0;">
       <div class="contact">
         <a href="tel:+4531443503"><i class="fa-solid fa-phone"></i> +45 3144 3503</a>
         <a href="mailto:daniel@drejr.dk"><i class="fa-solid fa-envelope"></i> daniel@drejr.dk</a>
